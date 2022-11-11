@@ -1,5 +1,5 @@
-What is 2+2?,answer_struct(a='4', b='5', c='', d='', e='', f=''),4
-What is 2*2?,answer_struct(a='5', b='4', c='', d='', e='', f=''),4
-What is this programming language?,answer_struct(a='Java', b='python', c='', d='', e='', f=''),python
-What is Tomas' agency name?,answer_struct(a='Hello media', b='Antunes Media', c='', d='', e='', f=''),Antunes Media
-What is that snail doing?,answer_struct(a='snailing', b='nothing', c='', d='', e='', f=''),snailing
+What is 2+2?,answer_struct(a='4', b='7', c='', d='', e='', f=''),4,40.0
+What is 2*2?,answer_struct(a='17', b='4', c='', d='', e='', f=''),4,40.0
+What is this programming language?,answer_struct(a='python', b='Java', c='', d='', e='', f=''),python,40.0
+What is Tomas' agency name?,answer_struct(a='Hello Media', b='Antunes Media', c='', d='', e='', f=''),Antunes Media,40.0
+What is that snail doing?,answer_struct(a='nothing', b='snailing', c='', d='', e='', f=''),snailing,40.0

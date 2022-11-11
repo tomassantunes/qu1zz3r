@@ -4,6 +4,7 @@ from typing import NamedTuple
 questions = []
 answers = []
 correct_answers = []
+points = []
 
 class answer_struct(NamedTuple):
     a: str = ""
@@ -27,9 +28,18 @@ while(num_answers < 2 or num_answers > 6):
     if(num_answers < 2 or num_answers > 6):
         print("The number of answers must be bigger than 2 and smaller than 6!")
 
+
+max_points = 0
+while(max_points < num_questions):
+    max_points = int(input("What is the max ammount of points in your quizz? "))
+    if(max_points < num_questions):
+        print("The max points has to be at least equal to the number of questions.")
+
 print("Define your questions below: ")
 for i in range(num_questions):
     a, b, c, d, e, f = "", "", "", "", "", ""
+
+    points.append(max_points / num_questions)
 
     questions.append(str(input("> ")))
     
@@ -78,6 +88,7 @@ for i in range(num_questions):
         case 'f':
             correct_answers.append(answers[i].f)
 
+
 if not os.path.exists("files"):
     os.makedirs("files")
 
@@ -87,7 +98,7 @@ file_name = f"files/{file_name}"
 file = open(file_name, "a")
 
 for i in range(num_questions):
-    file.write(f"{questions[i]},{answers[i]},{correct_answers[i]}\n")
+    file.write(f"{questions[i]},{answers[i]},{correct_answers[i]},{points[i]}\n")
 
 file.close()
 
