@@ -1,3 +1,4 @@
+import os
 from typing import NamedTuple
 
 questions = []
@@ -77,6 +78,17 @@ for i in range(num_questions):
         case 'f':
             correct_answers.append(answers[i].f)
 
-print(questions)
-print(answers)
-print(correct_answers)
+if not os.path.exists("files"):
+    os.makedirs("files")
+
+file_name = str(input("Name of the file to be saved: files/"))
+file_name = f"files/{file_name}"
+
+file = open(file_name, "a")
+
+for i in range(num_questions):
+    file.write(f"{questions[i]},{answers[i]},{correct_answers[i]}\n")
+
+file.close()
+
+print(f"Quizz has been saved to {os.path.abspath(file_name)}.")
